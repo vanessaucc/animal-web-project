@@ -3,33 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <title>Loro</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="bg-light">
 
-    <p class="credito">
-        FOTOGRAFÍA DE NATIONAL GEOGRAPHIC
-    </p>
+<div class="container py-5">
 
-    <div class="card">
-        <div class="info">
-            <p><strong>NOMBRE COMÚN:</strong> Loro</p>
-            <p><strong>NOMBRE CIENTÍFICO:</strong> <em>Psittacidae</em></p>
-            <p><strong>CLASE:</strong> Ave</p>
-            <p><strong>VIDA MEDIA EN LIBERTAD:</strong> 30 a 50 años</p>
-            <p><strong>TAMAÑO:</strong> De 10 cm a 1 metro</p>
-            <p><strong>PESO:</strong> De 30 gramos a 1,5 kilos</p>
-            <p><strong>HÁBITAT:</strong> Selvas tropicales</p>
-            <p><strong>ALIMENTACIÓN:</strong> Frutas y semillas</p>
-        </div>
+    <div class="text-center mb-4">
+        <h1 class="fw-bold">Loro</h1>
+        <p class="text-muted">Ave inteligente y sociable</p>
+    </div>
 
-        <div class="imagen">
-            <img src="loro.jpg" alt="Loro de colores posado en una rama">
+    <div class="card shadow-lg p-4">
+        <div class="row align-items-center">
+
+            <div class="col-md-6">
+                <img src="loro.jpg" class="img-fluid rounded-circle" alt="Loro de colores posado en una rama">
+            </div>
+
+            <div class="col-md-6">
+                <p><strong>Nombre científico:</strong> Psittacidae</p>
+                <p><strong>Clase:</strong> Ave</p>
+                <p><strong>Vida media:</strong> 30 a 50 años</p>
+                <p><strong>Hábitat:</strong> Selvas tropicales</p>
+                <p><strong>Alimentación:</strong> Frutas y semillas</p>
+
+                <button class="btn btn-success mt-3" onclick="mostrarInfo()">
+                    Ver más información
+                </button>
+            </div>
+
         </div>
     </div>
 
-    <button onclick="cambiarTema()">Cambiar tema</button>
+    <!-- Sección oculta -->
+    <div id="infoExtra" class="alert alert-info mt-4 d-none">
+        Los loros son aves inteligentes y sociables del orden Psittaciformes,
+        reconocidas por sus colores brillantes, picos ganchudos,
+        patas zigodáctilas (dos dedos al frente, dos atrás) y gran capacidad
+        para imitar sonidos. Existen más de 350 especies, distribuidas
+        principalmente en regiones tropicales. Son longevos,
+        omnívoros y muy activos.
+    </div>
 
-    <script src="script.js"></script>
+    <div class="text-center mt-4">
+        <button class="btn btn-dark" onclick="cambiarTema()">
+            Cambiar modo oscuro / claro
+        </button>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
